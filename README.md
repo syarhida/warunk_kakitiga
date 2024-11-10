@@ -1,6 +1,6 @@
 # Warunk Kaki Tiga
 
-Program ini adalah aplikasi sederhana untuk simulasi sistem kasir pada Warunk Kaki Tiga, sebuah tempat makan dengan daftar menu makanan dan minuman. Program ini memungkinkan pengguna untuk melihat menu, memasukkan pesanan hingga 4 item, serta menghitung total harga termasuk pajak, biaya pelayanan, dan diskon.
+Program ini adalah aplikasi sederhana untuk simulasi sistem kasir pada Warunk Kaki Tiga. Program ini memungkinkan pengguna untuk melihat menu, memasukkan pesanan hingga 4 item, serta menghitung total harga termasuk pajak, biaya pelayanan, dan diskon.
 
 ## Fitur
 
