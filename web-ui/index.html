@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Warunk Kaki Tiga — Web UI</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">WKT</div>
+          <div class="brand-text">
+            <h1 class="title">Warunk Kaki Tiga</h1>
+            <p class="subtitle">Selamat datang — nikmati hidangan pilihan kami</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <section class="menu-panel" aria-labelledby="menu-heading">
+        <h2 id="menu-heading" class="section-title">Menu</h2>
+
+        <div class="menu-group">
+          <h3 class="group-title">Menu Makanan</h3>
+          <div id="menu-makanan" class="menu-list" role="list"></div>
+        </div>
+
+        <div class="menu-group">
+          <h3 class="group-title">Menu Minuman</h3>
+          <div id="menu-minuman" class="menu-list" role="list"></div>
+        </div>
+      </section>
+
+      <aside class="order-panel" aria-labelledby="order-heading">
+        <h2 id="order-heading" class="section-title">Pesanan Anda</h2>
+        <p class="hint">Maksimal 4 item berbeda per pesanan.</p>
+        <div id="order-items" class="order-items"></div>
+        <div class="order-actions">
+          <button id="clear-order" class="btn btn-secondary" type="button">Bersihkan Pesanan</button>
+        </div>
+
+        <div class="receipt" aria-live="polite" aria-atomic="true">
+          <h3 class="receipt-title">Struk Belanja</h3>
+          <div id="receipt-lines" class="receipt-lines"></div>
+          <div class="receipt-totals" id="receipt-totals"></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="app-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Warunk Kaki Tiga</span>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+  </html>
+

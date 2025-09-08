@@ -1,0 +1,283 @@
+:root {
+  --green-600: #16a34a;
+  --green-700: #15803d;
+  --green-100: #dcfce7;
+  --text-900: #0f172a;
+  --text-700: #334155;
+  --muted-500: #64748b;
+  --border-200: #e2e8f0;
+  --bg-50: #f8fafc;
+  --white: #ffffff;
+  --shadow: 0 6px 18px rgba(2, 6, 23, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text-900);
+  background: var(--bg-50);
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.app-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-200);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--green-600), var(--green-700));
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.brand-text .title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.brand-text .subtitle {
+  margin: 2px 0 0 0;
+  color: var(--muted-500);
+  font-size: 13px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  padding: 24px 16px 40px;
+}
+
+@media (max-width: 980px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-title {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+
+.menu-panel, .order-panel {
+  background: var(--white);
+  border: 1px solid var(--border-200);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.menu-group + .menu-group {
+  margin-top: 18px;
+}
+
+.group-title {
+  margin: 0 0 10px 0;
+  color: var(--green-700);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.menu-card {
+  border: 1px solid var(--border-200);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-card h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.menu-card .price {
+  color: var(--text-700);
+  font-size: 14px;
+}
+
+.menu-card .actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--green-600);
+  color: var(--white);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--green-700);
+}
+
+.btn-secondary {
+  background: var(--green-100);
+  color: var(--green-700);
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 1fr 110px 32px;
+  gap: 8px;
+  align-items: center;
+}
+
+.order-item .name {
+  font-size: 14px;
+}
+
+.qty-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-200);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.qty-input input {
+  width: 48px;
+  text-align: center;
+  border: none;
+  padding: 8px 0;
+}
+
+.qty-input button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: var(--green-100);
+  color: var(--green-700);
+  cursor: pointer;
+}
+
+.remove-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border-200);
+  background: var(--white);
+  cursor: pointer;
+}
+
+.order-actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hint {
+  margin: 0 0 10px 0;
+  color: var(--muted-500);
+  font-size: 13px;
+}
+
+.receipt {
+  margin-top: 16px;
+  border-top: 1px dashed var(--border-200);
+  padding-top: 12px;
+}
+
+.receipt-title {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: var(--green-700);
+}
+
+.receipt-lines {
+  display: grid;
+  gap: 6px;
+}
+
+.receipt-line {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.receipt-line .muted {
+  color: var(--muted-500);
+}
+
+.receipt-totals {
+  margin-top: 10px;
+  border-top: 1px solid var(--border-200);
+  padding-top: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+.app-footer {
+  margin-top: 28px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border-200);
+  background: var(--white);
+  color: var(--muted-500);
+  font-size: 14px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+}
+
