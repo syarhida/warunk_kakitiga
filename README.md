@@ -32,3 +32,22 @@ Program ini memiliki beberapa konfigurasi utama:
 3. Masukkan pesanan hingga maksimal 4 item. Ketik "Selesai" untuk mengakhiri input pesanan sebelum mencapai 4 item.
 4. Untuk setiap pesanan, masukkan nama menu dan jumlah item.
 5. Setelah semua pesanan dimasukkan, program akan menampilkan struk belanja beserta total biaya yang harus dibayar.
+
+## Web UI
+
+Versi antarmuka web dengan tema dominan putih dan hijau tersedia pada direktori `web-ui/`.
+
+- Lokasi: `web-ui/`
+- Menjalankan secara cepat:
+  - Buka langsung file `web-ui/index.html`, atau
+  - Jalankan server statis lokal, lalu buka tautan yang ditampilkan:
+
+```bash
+python3 -m http.server 8080 --directory /workspace/web-ui
+```
+
+- Fitur setara:
+  - Menampilkan menu makanan/minuman.
+  - Tambah ke pesanan (maks. 4 item berbeda), ubah kuantitas, hapus item.
+  - Perhitungan subtotal, pajak 10%, biaya pelayanan Rp20.000, promo minuman gratis (> Rp50.000), dan diskon 10% (> Rp100.000).
+  - Struk belanja interaktif.
